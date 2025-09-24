@@ -12,14 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App1">
 
-        <!-- 👇 Declaración de MainActivity debe ir aquí dentro de <application> -->
-        <activity android:name=".MainActivity"
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!--Login Activity  -->
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+
+        <!--EditarPerfilActivity (El Feo) Activity-->
+        <activity
+            android:name=".EditarPerfilActivity"
+            android:exported="false" />
+
+        <!--EditarPerfil (El Bonito, Creado por Tea, te amo TEA
+        QUE HARÍA SIN TI) Activity-->
+        <activity
+            android:name=".EditarPerfil"
+            android:exported="false" />
+
+
 
     </application>
 

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     // Opcional SafeArgs para pasar datos entre fragments
+    //capaz posible para el login
     // id("androidx.navigation.safeargs.kotlin")
 }
 
@@ -54,6 +55,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     // Navigation Component
+    //puede no usarse
     val nav_version = "2.8.3"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")

@@ -1,5 +1,6 @@
-package com.example.app1  // ajusta esto al nombre de tu paquete real
+package com.example.app1
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.View
@@ -7,6 +8,8 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
+import com.example.app1.EditarPerfil
+import com.example.app1.EditarPerfilActivity
 
 class Login : AppCompatActivity() {
 
@@ -17,9 +20,9 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Si quieres, puedes dejar el ícono local que ya pusiste en el XML (mipmap/ic_launcher)
+        // Icono de prueba
         val imageView: ImageView = findViewById(R.id.rgs5tjo234lb)
-        imageView.setImageResource(R.mipmap.ic_launcher)  // o pon otra imagen de tus recursos
+        imageView.setImageResource(R.mipmap.ic_launcher)
 
         val editText1: EditText = findViewById(R.id.rtc8hizm1oj)
         editText1.addTextChangedListener(object : TextWatcher {
@@ -39,14 +42,20 @@ class Login : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        val button1: View = findViewById(R.id.r5zgz8umxifp)
+        val button1: View = findViewById(R.id.r5zgz8umxifp) // Botón Entrar
         button1.setOnClickListener {
             println("Entrar presionado con usuario=$editTextValue1 contraseña=$editTextValue2")
+
+            //EditarPerfilActivity
+            val intent = Intent(this, EditarPerfilActivity::class.java)
+            startActivity(intent)
         }
 
-        val button2: View = findViewById(R.id.rkaqwcixgzjp)
+        val button2: View = findViewById(R.id.rkaqwcixgzjp) // Botón Crear cuenta
         button2.setOnClickListener {
-            println("Crear cuenta presionado")
+            println("Entrar al login mas bonito")
+            val intent = Intent(this, EditarPerfil::class.java)
+            startActivity(intent)
         }
     }
 }

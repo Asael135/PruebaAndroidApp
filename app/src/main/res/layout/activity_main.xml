@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:padding="24dp"
-    android:background="#FFBB86FC"> <!-- color de fondo chido -->
+    android:background="#FFBB86FC">
 
+    <!-- Botón principal -->
     <Button
         android:id="@+id/btnAwesome"
         android:layout_width="wrap_content"
@@ -16,5 +17,14 @@
         android:backgroundTint="#6200EE"
         android:padding="16dp"
         android:textSize="18sp"
-        android:elevation="8dp"/>
+        android:elevation="8dp"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Contenedor donde se mostrará el fragment -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF"/>
 </LinearLayout>
