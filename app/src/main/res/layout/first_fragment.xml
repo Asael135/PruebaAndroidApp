@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:padding="24dp"
     android:background="#FFBB86FC"> <!-- fondo turquesa -->
-
+    <!-- fondo turquesa -->
+    <!-- fondo turquesa Copai -->
     <Button
         android:id="@+id/btnGoToSecondFragment"
         android:layout_width="0dp"
